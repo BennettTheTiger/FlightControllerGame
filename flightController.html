@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Flight Controller</title>
+	<link rel="icon" href="assets/icon.png">
+	<link rel="stylesheet" type="text/css" href="flightStyles.css">
+</head>
+	<audio id="bgMusic" src="assets/audio/menu1.mp3" loop></audio>
+	<body>
+		<!-- The main game screen ---------------------------------------------------------------------------->
+		<div class="gameScreen">
+			<section id="gameStats">
+				<h3 id="highScore">High Score:</h3>
+				<h3 id="score">Total Landed:</h3>
+				<h3 id="airlinerScore">Airliners:</h3>
+				<h3 id="personalScore">Personal Aircraft:</h3>
+				<h3 id="heliScore">Helicopters:</h3>
+			</section>
+			<canvas id="homeScreen" width = "1000px" height="600px";></canvas>
+			<button class="quitButton">Quit</button>
+		</div>	
+		<!-- The pause screen -------------------------------------------------------------------------------->
+		<div id ="pauseScreen">
+			<h1 id="msg">Welcome Back!</h1>
+			<button class="resumeButton">Resume Game</button>
+			<button class="quitButton">Quit</button>
+		</div>
+		<!-- The game over screen --------------------------------------------------------------------------->
+		<div id ="gameOverScreen">
+			<h1 id="overMsg">Game Over!</h1>
+			<h2 id="yourScore"></h2>
+			<button class="doneButton">Menu</button>
+		</div>
+
+	<!-- The main menu screen -------------------------------------------------------------------------------->
+	<div class="homeScreen">
+	<h1 id="title">Flight Controller</h1>
+		<hr size="5px">
+			<div id="gameSettings">
+			<input id="bgLevel" type="range" min="0" max="1" step=".01">Background Music<br>
+			<input id="sfxLevel" type="range" min="0" max="1" step=".01">SFX
+			<div>
+			<!-- The value of the input is the time in ms for spawning in new aircraft -->	
+			<input class="level" id="levelPicker1" type="radio" name="level" value="10000" checked>Rookie
+			<input class="level" id="levelPicker2" type="radio" name="level" value="8000">Regular
+			<input class="level" id="levelPicker3"type="radio" name="level" value="5000">Veteran
+			</div>
+		</div>
+		<button class="playButton">P l a y</button>
+		<div class="levelTxt">
+			Select your difficulty
+		</div>
+		<div class="highestScore"></div>
+	
+	
+	<svg id="tower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920"><style>.st0{fill:#808080;} .st1{fill:#333333;} .st2{fill:#CCCCCC;} .st3{fill:#9EC3F5;stroke:#333333;stroke-width:12;stroke-miterlimit:10;} .st4{fill:none;stroke:#333333;stroke-width:12;stroke-miterlimit:10;} .st5{fill:#1A1A1A;}</style><g id="Bottom"><path id="Base" d="M775 1807H353l112.1-628.4h207.7z"/><g id="midBody"><path class="st0" d="M672.6 1181.3c-78.7-1.6-128.9 1.6-207.6 0-13.1-38.3-41.1-87.4-54.1-125.6 10.4-13.7 68-85.7 154.1-86.3 105.9-.7 149.4 78.3 159.4 89"/><path class="st1" d="M703.4 834.6c-33.1 9-82 14.8-136.5 14.8-53.8 0-102.1-5.6-135.2-14.4-27.9 36.3-44.7 83.8-44.7 135.9 0 32.4 6.5 63 18.2 90.2 29.6-30.2 90.9-50.9 161.8-50.9 71.7 0 133.6 21.3 162.8 52.1 11.9-27.5 18.7-58.5 18.7-91.3-.1-52.4-17.1-100-45.1-136.4z"/><path id="Trim" class="st2" d="M366.5 922.9h405.2v36.7H366.5z"/></g></g><ellipse id="Floor" class="st2" cx="562.5" cy="840" rx="211.5" ry="14.3"/><path id="windowSill" class="st0" d="M423 749h284.4v86.3H423z"/><path id="Window" class="st3" d="M715 750H413.5l-53.2-186h403.4z"/><path class="st4" d="M451 564l33 186m78-186v186m71 0l33-186" id="WindowBars"/><path id="Roof" class="st5" d="M319 520h476v44H319z"/><path d="M366.1 456c.2 5.3.4 10.7.6 16l.5 16c.1 5.3.5 10.7.3 16-.2 5.3-.5 10.7-1.4 16h-.3c-.8-5.3-1.1-10.7-1.4-16-.2-5.3.2-10.7.3-16l.5-16c.2-5.3.4-10.7.6-16h.3z" id="Antenna5"/><path d="M439.6 456.4l10.8 16.7 10.6 16.8c3.5 5.6 7.3 11.1 10.5 16.8 3.2 5.8 6.4 11.6 9.1 17.7l-.3.2c-4.1-5.2-7.8-10.7-11.4-16.3-3.6-5.6-6.7-11.4-10-17.2l-9.9-17.2-9.7-17.3.3-.2z" id="Antenna4"/><path d="M495.6 456.5l-3.2 17.1-3.3 17.1c-1.1 5.7-2 11.4-3.5 17.1-1.4 5.6-3 11.2-5.1 16.7l-.3-.1c.4-5.8 1.4-11.6 2.4-17.3 1-5.7 2.7-11.3 4-16.9l4.2-16.9 4.3-16.9.5.1z" id="Antenna3"/><path d="M698.6 472.9L685 487.4l-13.7 14.4c-4.6 4.8-9 9.7-13.8 14.2-4.8 4.5-9.7 9-15 13.1l-.2-.2c4.1-5.3 8.5-10.2 13.1-15 4.5-4.8 9.5-9.2 14.2-13.8l14.4-13.7 14.5-13.6.1.1z" id="Antenna2"/><path d="M639.6 482.6l13.8 10.7 13.7 10.8c4.5 3.6 9.2 7 13.6 10.9 4.3 3.9 8.6 7.8 12.5 12.2l-.2.2c-5-3.1-9.7-6.5-14.2-10.1-4.6-3.5-8.8-7.6-13.2-11.4l-13.1-11.5-13-11.6.1-.2z" id="Antenna1"/><path class="st4" d="M562.5 373.5v146M508 484h112m-97-37h81" id="RadarPole"/><path id="Radar" class="st1" d="M573.2 364.3c2-2.2 3.2-5.1 3.1-8.3-.2-6.6-5.7-11.9-12.3-11.7-3.3.1-6.3 1.5-8.4 3.8-33-31.7-58.9-65.7-76-97.2-15.6 24.8 10 80.1 60.1 127.7 52.8 50.2 112.9 72.8 134.2 50.4-31.7-13.1-66.8-35.2-100.7-64.7z"/></svg>
+	</div>
+
+	</body>
+	
+		
+	<!-- Load in the scripts -->
+	<script src="js/main.js" type="text/javascript"></script>
+	<script src="js/aircraft.js" type="text/javascript"></script>
+	<script src="js/map.js" type="text/javascript"></script>
+	<script src="js/sound.js" type="text/javascript"></script>
+	<script src="js/ui.js" type="text/javascript"></script>
+	<script src="js/loader.js" type="text/javascript"></script>
+	
+</html>

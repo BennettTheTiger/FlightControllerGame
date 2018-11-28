@@ -1,0 +1,171 @@
+@font-face {
+    font-family: Portico;
+    src: url("assets/font/Rough.otf") format("opentype");
+}
+
+body{
+	min-width: 1000px;
+	font-family: Portico;
+	background-color: #f2f6f4;
+}
+#homeScreen{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+#gameStats{
+	position: absolute;
+	bottom: 0px;
+	display: inline;
+	font-size: 12pt;
+	padding-bottom: 20px;
+	background-color: '#252525';
+	height: 100px;
+	width: 100%;
+}
+#gameSettings{
+	top:15px;
+	position: relative;
+	margin-left: 48%;
+	display: inline-block;
+	background-color: #b49e9f;
+    align-content: center;
+	padding: 20px;
+	border-radius: 10px;
+	width: 300px;
+}
+#highScores{
+	position: relative;
+	display: none;
+}
+
+#allScores{
+	position: relative;
+	z-index: 200;
+	left: 48%;
+	top:15px;
+	padding: 10px;
+	color: #ee7e43;
+
+}
+h3{
+	padding-left: 20px;
+	display: inline;
+}
+
+button {
+	position: relative;
+	z-index: 150;
+    background-color: #804659; 
+    border: none;
+    color: white;
+	top:150px;
+	height:50px;
+	width: 300px;
+    text-align: center;
+    display: inline-block;
+    font-size: 22px;
+	font-family: Portico;
+}
+
+button:hover{
+	color: #ee7e43;
+}
+
+#tower{
+	position: fixed;
+	top:-100px;
+	left: 0px;
+	height: 1000px;
+	z-index: 25;
+}
+
+#title{
+	position: relative;
+	padding-left: 48%;
+	color: #ee7e43;
+	z-index: 50;
+	padding-top: 100px;
+	font-size: 3em;
+}
+hr{
+	width: 35%;
+	margin-left: 48%;
+	background-color: #EEA872;
+	margin-top: -15px;
+}
+
+.level{
+	padding-left: 10px;
+	position: relative;
+	display: inline-block;
+	z-index: 200;
+}
+
+.levelTxt{
+	margin-left: 48%;
+	top:20px;
+	position: relative;
+	background-color: #b49e9f;
+	width: 330px;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.quitButton{
+top : 625px;
+}
+
+#pauseScreen{
+	background-color: rgba(0,0,0,.75);
+	color: #ee7e43;
+	width: 1000px;
+	height: 600px;
+	position: absolute;
+	top: 0px;
+	z-index: 100;
+	text-align: center;
+
+}
+#gameOverScreen{
+	background-color: rgba(0,0,0,.75);
+	color: #ee7e43;
+	width: 1000px;
+	height: 600px;
+	position: absolute;
+	top: 0px;
+	z-index: 500;
+	text-align: center;
+}
+
+.playButton{
+	position: absolute;
+	left: 55%;
+	top: 500px;
+}
+
+.resumeButton{
+	margin-left: 20%;
+}
+
+.quitButton{
+	
+}
+
+#Radar{
+	animation-name: radarSearch;
+    animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	transform-origin: 50% 50%;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+
+@keyframes radarSearch {
+	0% { transform: rotateZ(-25deg);}
+	100% { transform: rotateZ(5deg);}
+}
+
+
+
